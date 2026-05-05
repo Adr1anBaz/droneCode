@@ -1,0 +1,49 @@
+
+
+I want you to help me generate orientation-control code for a drone.
+
+The project we are working on is a small drone controlled through PWM. For this, we are using AO3400 MOSFET transistors. The full list of components can be found in the BOM, Bill of Materials, located in the root folder of the project.
+
+Likewise, all the necessary physics theory to understand the drone is contained in the PDF file called `dronePaper.pdf`; you can review it. The idea is that, from Arduino code, I can control the drone motors through PWM in such a way that I can control all its axes: the Z, X, and Y axes, corresponding to Roll, Pitch, and Yaw. It would also be useful if you could explain what each one is — what Roll is, what Pitch is, what Yaw is — and include some of the necessary theory to understand the system.
+
+We are using an ESP32-S3 Xiao Super Mini.
+
+This manual is important because it describes everything about how to use the ESP32 board we have:
+
+[https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+
+We are using an MPU6050 to estimate the drone’s orientation. We communicate with the MPU6050 through I2C using pin D8 as SCL and pin D7 as SDA, from the ESP32 to the IMU.
+
+For the motors, we are using the following pins:
+
+* D10: Motor 1
+* D9: Motor 2
+* D5: Motor 3
+* D6: Motor 4
+
+These pins go from the ESP32 to the MOSFET transistors using PWM. All motors are 8520 motors.
+
+Please tell me the motor considerations in terms of clockwise and counterclockwise rotation. You should define which motor should rotate clockwise and which should rotate counterclockwise, and I will connect them accordingly. I have a kit where some motors have red and blue wires, and others have white and black wires. I also have type A and type B propellers.
+
+I want two sets of code.
+
+The first one should be a testing code, which will be used to verify that the PCB we designed works correctly. Since LiPo batteries will be used, the testing code should include two parts:
+
+1. An Arduino code that is uploaded directly to the ESP32.
+2. A Python code that connects directly to the ESP32 over the internet, since we have a WiFi antenna, and allows us to send PWM instructions to the motors.
+
+By the way, I want PWM to be handled in terms of percentage, for example 100% or 50% PWM. That is how it should be managed.
+
+For the ESP32 to connect to the internet, it should try to connect to the WiFi network named:
+
+`Primavera2026`
+
+with the password:
+
+`Ib3r02026pR1m`
+
+Please analyze whether it would be better for my computer to connect to a WiFi network created by the ESP32 itself in order to send it commands. That option is also acceptable. I prefer whatever is simpler. But I do want to be able to control the drone with Python for now.
+
+The second code should be the actual orientation-control code for the angles I mentioned: Roll, Pitch, and Yaw. This code should also include Python-based control. In other words, if I tell it that I want 90° around the Z axis, the drone should move in such a way that it rotates 90°. Is that clear?
+
+Let me know if you have any questions.
