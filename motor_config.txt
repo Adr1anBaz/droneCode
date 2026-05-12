@@ -1,0 +1,19 @@
+MOTOR CONFIGURATION - Cross/X Layout (Top View)
+
+        Front
+  M1 (CCW)   M2 (CW)
+      \        /
+       \      /
+        ----
+       /      \
+      /        \
+  M3 (CW)    M4 (CCW)
+        Back
+
+
+Motor 1 (D10) - Front Left  - Counter-CW    - Black/White wires - Propeller Type B
+Motor 2 (D9)  - Front Right - Clockwise     - Red/Blue wires   - Propeller Type A
+Motor 3 (D8)  - Back Left   - Clockwise     - Red/Blue wires   - Propeller Type A
+Motor 4 (D6)  - Back Right  - Counter-CW    - Black/White wires - Propeller Type B
+
+IMU (MPU6050): SDA = D5, SCL = D4

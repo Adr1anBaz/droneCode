@@ -4,22 +4,22 @@
   Motor Configuration (Cross/X layout, top view):
 
         Front
-    M1 (CW)    M2 (CCW)
+    M1 (CCW)   M2 (CW)
         \      /
          \    /
           \/
           /\
          /  \
-    M3 (CCW)   M4 (CW)
+    M3 (CW)    M4 (CCW)
         Back
 
-  Motor 1 (D10) - Front Left  - Clockwise      - Red/Blue wires  - Propeller Type A
-  Motor 2 (D9)  - Front Right - Counter-CW     - White/Black wires - Propeller Type B
-  Motor 3 (D5)  - Back Left   - Counter-CW     - White/Black wires - Propeller Type B
-  Motor 4 (D6)  - Back Right  - Clockwise      - Red/Blue wires  - Propeller Type A
+  Motor 1 (D10) - Front Left  - Counter-CW     - Black/White wires - Propeller Type B
+  Motor 2 (D9)  - Front Right - Clockwise      - Red/Blue wires   - Propeller Type A
+  Motor 3 (D5)  - Back Left   - Clockwise      - Red/Blue wires   - Propeller Type A
+  Motor 4 (D6)  - Back Right  - Counter-CW     - Black/White wires - Propeller Type B
 
-  CW motors (1,4): Red/Blue wires, Type A propellers (pusher)
-  CCW motors (2,3): White/Black wires, Type B propellers (puller)
+  CW motors (2,3): Red/Blue wires, Type A propellers (pusher)
+  CCW motors (1,4): Black/White wires, Type B propellers (puller)
 
   WiFi: AP mode - SSID "DroneTest" / Password "drone1234"
   Control: HTTP server on 192.168.4.1:80
